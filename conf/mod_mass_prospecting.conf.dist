@@ -1,0 +1,40 @@
+[worldserver]
+
+#
+# Mass Prospecting
+#
+# Lets a player prospect an ore over and over with one command, the way Create All
+# repeats a craft: `.massprospect start <ore entry> <count>`. Each prospect is a normal
+# Prospecting cast (cast bar, skill check, interrupted by moving), started by the
+# server as soon as the previous prospect's loot has been taken. ProspectingUI's Create
+# All button drives this; the command is mostly meant for that addon.
+#
+
+#
+#    MassProspecting.Enable
+#        Description: Master switch. 0 disables `.massprospect start`.
+#        Default:     1
+#
+MassProspecting.Enable = 1
+
+#
+#    MassProspecting.MaxCount
+#        Description: Most prospects a single run may ask for.
+#        Default:     200
+#
+MassProspecting.MaxCount = 200
+
+#
+#    MassProspecting.DelayMs
+#        Description: Pause between one prospect's loot being taken and the next cast.
+#        Default:     250
+#
+MassProspecting.DelayMs = 250
+
+#
+#    MassProspecting.LootTimeoutSec
+#        Description: How long a run waits for the player to take a prospect's loot
+#                     before it stops. Players with auto-loot never hit this.
+#        Default:     30
+#
+MassProspecting.LootTimeoutSec = 30

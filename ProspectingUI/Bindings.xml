@@ -1,0 +1,5 @@
+<Bindings>
+	<Binding name="PROSPECTINGUI_TOGGLE" header="PROSPECTINGUI">
+		ProspectingUI_Toggle();
+	</Binding>
+</Bindings>

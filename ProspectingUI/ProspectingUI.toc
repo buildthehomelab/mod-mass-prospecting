@@ -1,0 +1,9 @@
+## Interface: 30300
+## Title: ProspectingUI
+## Notes: Gives Prospecting its own profession window in the default Blizzard tradeskill style.
+## Version: 1.0
+## OptionalDeps: ReagentBankUI
+## SavedVariablesPerCharacter: ProspectingUIDB
+
+Data.lua
+ProspectingUI.lua
