@@ -46,6 +46,13 @@ whole amount from one click.
 Replies for the addon are system messages starting with `MASSPROSPECT:`. ProspectingUI hides them from
 chat.
 
+## Requirements
+
+- AzerothCore wotlk (master). No other module is needed and no SQL is run.
+- WoW 3.3.5a (12340) client. The module works without the addon, but only **ProspectingUI** gives it a
+  window and a Create All button.
+- Optional: ReagentBankUI, which ProspectingUI integrates with if it is installed.
+
 ## Install
 
 ```bash
@@ -68,3 +75,22 @@ For the addon, copy the `ProspectingUI` folder into `World of Warcraft/Interface
 | `MassProspecting.MaxCount` | `200` | Most prospects one run can ask for. |
 | `MassProspecting.DelayMs` | `250` | Pause between taking a prospect's loot and the next cast. |
 | `MassProspecting.LootTimeoutSec` | `30` | How long a run waits for loot to be taken before it stops. |
+
+## Troubleshooting
+
+- **A run stops after one prospect.** Without Auto Loot the server waits for you to take the loot of each
+  prospect before the next cast. Turn on Auto Loot, or take the loot before `MassProspecting.LootTimeoutSec`
+  runs out.
+- **Create All only does one at a time.** The module is not running. ProspectingUI looks for it with
+  `.massprospect ping`, so check that the worldserver was rebuilt with the module and that
+  `MassProspecting.Enable` is `1`.
+- **A run stops early.** Moving, an interrupted cast, having no stack of 5 left, or clicking again
+  (`.massprospect stop`) all end a run. A single run is limited by `MassProspecting.MaxCount`.
+
+## Credits
+
+Author: [buildthehomelab](https://github.com/buildthehomelab)
+
+## License
+
+GNU AGPL v3. See [LICENSE](LICENSE).
